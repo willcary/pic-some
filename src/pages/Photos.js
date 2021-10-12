@@ -12,7 +12,7 @@ function Photos() {
     ))
     
     return (
-        <main className="photos">
+        <main className="photos container">
             {imageElements}
         </main>
     )
