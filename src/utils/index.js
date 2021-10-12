@@ -5,4 +5,7 @@ export function getClass(i) {
     else if (i % 6 === 0) {
         return 'wide'
     }
+    else if (i % 8 === 0) {
+        return 'tall'
+    }
 }
