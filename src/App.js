@@ -7,7 +7,7 @@ import Photos from "./pages/Photos"
 
 function App() {    
     return (
-        <div>
+        <>
             <Header />
             <Switch>
                 <Route exact path="/">
@@ -18,7 +18,7 @@ function App() {
                     <Cart />
                 </Route>
             </Switch>
-        </div>
+        </>
     )
 }
 
