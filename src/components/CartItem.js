@@ -8,6 +8,7 @@ function CartItem({item}) {
     const iconClassName = isHovering ? "fill" : "line";
     
     return (
+        <div>
         <div className="cart-item">
             <i 
                 className={`ri-delete-bin-${iconClassName}`}
@@ -15,8 +16,10 @@ function CartItem({item}) {
                 onMouseEnter={(() => setIsHovering(true))} 
                 onMouseLeave={(() => setIsHovering(false))}
             ></i>
-            <img src={item.url} alt={item.id} width="130px" className='cart-img' />
+            <img src={item.url} alt={item.id} className='cart-img' />
             <p>$5.99</p>
+        </div>
+        <hr></hr>
         </div>
     )
 }

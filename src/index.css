@@ -194,13 +194,16 @@ div.order-button > button:disabled {
 .cart-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin: 20px 0;
 }
 
 .cart-img {
   margin-right: auto;
   margin-left: 10px;
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
 }
 
 .ri-delete-bin-line,
