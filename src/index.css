@@ -159,7 +159,7 @@ img.image-grid {
 /*==== Cart ====*/
 
 main.cart-page {
-  padding: 10px;
+  padding: 1em;
 }
 
 .cart-page > h1 {
@@ -184,7 +184,8 @@ div.order-button > button {
 }
 
 div.order-button > button:focus {
-  outline: none;
+  outline: solid 2px var(--red);
+  outline-offset: 2px;
 }
 
 div.order-button > button:disabled {
@@ -204,6 +205,7 @@ div.order-button > button:disabled {
   width: 150px;
   height: 100px;
   object-fit: cover;
+  box-shadow: var(--shadow);
 }
 
 .ri-delete-bin-line,
