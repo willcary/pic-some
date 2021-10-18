@@ -23,10 +23,7 @@ function ImageModal({show, img, hideModal}) {
         <div className="modal" onClick={hideModal}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <img src={img.url} alt={img.id} className="modal-img" />
-                <button type="button" className="modal-close" onClick={hideModal}>
-                    X
-                    {/* <i class="ri-close-line" class="modal__close">Close</i> */}
-                </button>
+                <button type="button" className="modal-close" onClick={hideModal}>X</button>
             </div>
         </div>
     )
@@ -34,11 +31,6 @@ function ImageModal({show, img, hideModal}) {
 
 ImageModal.propTypes = {
     show: PropTypes.bool.isRequired,
-    img: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-        isFavorite: PropTypes.bool
-    })
 }
 
 export default ImageModal
