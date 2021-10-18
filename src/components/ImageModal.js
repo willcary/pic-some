@@ -13,7 +13,7 @@ function ImageModal({show, img, hideModal}) {
         return function cleanup() {
             document.body.addEventListener('keydown', hideOnEscapeKeyDown)
         }
-    }, [])
+    })
     
     if (!show) {
         return null;
