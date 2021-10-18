@@ -15,7 +15,7 @@ function Cart() {
     function placeOrder() {
         setButtonText("Ordering...")
         setTimeout(() => {
-            console.log("Order placed!")
+            alert("Order placed!")
             setButtonText("Place Order")
             emptyCart()
         }, 3000)
@@ -28,10 +28,8 @@ function Cart() {
             <p className="total-cost">Total: {totalCostDisplay}</p>
             {
                 cartItems.length > 0 ?
-                <div className="order-button">
-                    <button onClick={placeOrder}>{buttonText}</button>
-                </div> :
-                <p>You have no items in your cart.</p>
+                    <button className="order-button" onClick={placeOrder}>{buttonText}</button> :
+                    <p>You have no items in your cart.</p>
             }
         </main>
     )
