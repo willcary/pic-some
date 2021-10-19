@@ -1,24 +1,33 @@
-import React, {useState, useContext} from "react"
-import {Context} from "../Context"
-import CartItem from "../components/CartItem"
+import React, {useState, useContext, useEffect} from "react";
+import {Context} from "../Context";
+import CartItem from "../components/CartItem";
 
 function Cart() {
-    const [buttonText, setButtonText] = useState("Place Order")
-    const {cartItems, emptyCart} = useContext(Context)
-    const totalCost = 5.99 * cartItems.length
-    const totalCostDisplay = totalCost.toLocaleString("en-US", {style: "currency", currency: "USD"})
+    const [buttonText, setButtonText] = useState("Place Order");
+    const {cartItems, emptyCart} = useContext(Context);
+    const [totalPrice, setTotalPrice] = useState(0);
+    const totalCostDisplay = totalPrice.toLocaleString("en-US", {style: "currency", currency: "USD"});
     
     const cartItemElements = cartItems.map(item => (
         <CartItem key={item.id} item={item} />
-    ))
+    ));
+
+    useEffect(() => {
+        if (cartItems.length === 0) {
+            setTotalPrice(0);
+        }
+        setTotalPrice(cartItems.reduce((total, item) => {
+            return total + item.price;
+        }, 0));
+    }, [cartItems]);
     
     function placeOrder() {
-        setButtonText("Ordering...")
+        setButtonText("Ordering...");
         setTimeout(() => {
-            alert("Order placed!")
-            setButtonText("Place Order")
-            emptyCart()
-        }, 3000)
+            alert("Order placed!");
+            setButtonText("Place Order");
+            emptyCart();
+        }, 3000);
     }
     
     return (

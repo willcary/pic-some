@@ -17,7 +17,7 @@ function CartItem({item}) {
                 onMouseLeave={(() => setIsHovering(false))}
             ></i>
             <img src={item.url} alt={item.id} className='cart-img' />
-            <p>$5.99</p>
+            <p>{item.price}</p>
         </div>
         <hr></hr>
         </div>

@@ -1,39 +1,44 @@
-import React, {useState, useEffect} from "react"
+import React, {useState, useEffect} from "react";
 
-const Context = React.createContext()
+const Context = React.createContext();
 
 function ContextProvider({children}) {
-    const [allPhotos, setAllPhotos] = useState([])
-    const [cartItems, setCartItems] = useState([])
+    const [allPhotos, setAllPhotos] = useState([]);
+    const [cartItems, setCartItems] = useState([]);
     
-    const url = "https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json"
+    const url = "https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json";
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
-            .then(data => setAllPhotos(data))
+            .then(data => setAllPhotos(data));
     }, [])
     
     function toggleFavorite(id) {
         const updatedArr = allPhotos.map(photo => {
             if(photo.id === id) {
-                return {...photo, isFavorite: !photo.isFavorite}
+                return {...photo, isFavorite: !photo.isFavorite};
             }
-            return photo
+            return photo;
         })
         
-        setAllPhotos(updatedArr)
+        setAllPhotos(updatedArr);
+    }
+
+    //Return a random number to set each cart item's price
+    function randomPrice() {
+        return ((Math.floor(Math.random() * 9) + 1) * 10) - 0.01;
     }
     
     function addToCart(newItem) {
-        setCartItems(prevItems => [...prevItems, newItem])
+        setCartItems(prevItems => [...prevItems, {...newItem, price: randomPrice()}]);
     }
     
     function removeFromCart(id) {
-        setCartItems(prevItems => prevItems.filter(item => item.id !== id))
+        setCartItems(prevItems => prevItems.filter(item => item.id !== id));
     }
     
     function emptyCart() {
-        setCartItems([])
+        setCartItems([]);
     }
     
     return (
@@ -43,11 +48,11 @@ function ContextProvider({children}) {
             cartItems, 
             addToCart, 
             removeFromCart, 
-            emptyCart
+            emptyCart,
         }}>
             {children}
         </Context.Provider>
-    )
+    );
 }
 
-export {ContextProvider, Context}
+export {ContextProvider, Context};
