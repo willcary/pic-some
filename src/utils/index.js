@@ -1,4 +1,10 @@
 export function getClass(i) {
+    if (i === 10) {
+        return null;
+    }
+    if (i === 11) {
+        return 'big';
+    }
     if (i % 5 === 0) {
         return 'big';
     }
