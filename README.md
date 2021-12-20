@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Pic Some App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Pic Some App is a mock image retail store. It allows the user to scroll through images, favorite and/or add them to their cart. View live [here](https://pict-some.netlify.app/).
 
-## Available Scripts
+## Motivation
 
-In the project directory, you can run:
+I completed the initial version of this app as part of a series of challenges presented in [The React Bootcamp](https://scrimba.com/learn/react). _I thought it could be better_ though, so I added more functionality. Here is a list of additions I made to the original app:
 
-### `npm start`
+- Responsive image sizing for the grid layout.
+- Altered cart icon for better visibility.
+- Implemented a modal popup for viewing images in a large display.
+- Implemented a random price from $10-100 for each image.
+- Revamped the Total($) in the checkout page to incorporate the aformentioned random prices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to use
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+As you hover over each image, three options appear:
 
-### `npm test`
+1. A heart to favorite images
+2. A plus icon to add the image to your cart
+3. A "see large" button to enlargen the image in a modal.
+   ![Home page of the Pic Some App](./src/assets/images/pic-some.JPG)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Example of an open model (escape by clicking the x in the upper right, clicking anywhere outside the modal image, or by pressing esc).
+![Open modal in the Pic Some App](./src/assets/images/pic-some-modal.JPG)
 
-### `npm run build`
+Example of the checkout page where you can view the total, remove items from your cart, and "place your order".
+![Home page of the Pic Some App](./src/assets/images/pic-some-checkout.JPG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**_Please note_**: This not a functioning store. Clicking "Place Order" resets the cart and creates an alert that says your order was placed, but does not mean you actually purchased anything.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## What I learned
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+While completing this project I reinforced my knowledge of how to implement propTypes for components, fetch data from an external API, store data in state, and subsequently manipulate that data according to user input. I also learned how to implement a modal from scratch within React.
 
-### `npm run eject`
+## Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Create React App](https://github.com/facebook/create-react-app).
+[React Router](https://reactrouter.com/)(v5)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Credits
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[The React Bootcamp](https://scrimba.com/learn/react)
