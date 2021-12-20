@@ -35,9 +35,10 @@ While completing this project I reinforced my knowledge of how to implement prop
 
 ## Technologies
 
-[Create React App](https://github.com/facebook/create-react-app).
+[React](https://reactjs.org/),
 [React Router](https://reactrouter.com/)(v5)
 
 ## Credits
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 [The React Bootcamp](https://scrimba.com/learn/react)
